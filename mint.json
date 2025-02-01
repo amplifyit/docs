@@ -57,8 +57,7 @@
       "group": "Essentials",
       "pages": [
         "triggers",
-        "commandbar",
-        "steps",
+        "commandbar"
       ]
     },
     {
