@@ -1,0 +1,26 @@
+<Warning>
+  **Note**: Command bar flows doesn’t have a trigger option, by default the trigger is when the command bar button is clicked by the user
+</Warning>
+
+## Fixed Options
+
+These three options are the only fixed triggers when configuring UX flows for all model-driven app table form:
+
+1. Form loaded
+
+2. Form Saved
+
+3. Form Saved Started
+
+## Dynamic Options
+
+Triggers will be generated dynamically for each UX flows depending on the selected table and the selected form, below are the categories that will generate a trigger for each component that exist on the form:
+
+1. Tab state is changed
+   If you want to configure a logic when a tab state is changed, the trigger will be `[Tab name] state is changed`.
+
+2. Column value is changed
+   If you want to configure a logic when a column value is changed, the trigger will be `[Column name] state is changed`.
+
+3. Lookup tag is clicked
+   If you want to configure a logic when a lookup control tag is clicked, the trigger will be `[Column name] tag is clicked`.&#x20;

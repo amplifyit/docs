@@ -1,0 +1,47 @@
+---
+title: "Command Bar"
+description: "Command bar flows are designed to prepare a script generated from the maker configurations to be added by the maker to the command they designed using the command bar designer in PowerApps or using any community tools such as RibbonWorkBench."
+---
+
+<Warning>
+  The current version only supports ribbon for Form command bards
+</Warning>
+
+## Creating a command bar flow
+
+1. From Flows click on New ![](/images/ribbonnew.webp)
+
+2. Choose the “Command bar (Ribbon)” option ![](/images/ribbonnewwindow.webp)
+
+3. Set a name for the flow and then choose a table and a form for the command bar you want to extend. ![](/images/ribbonnewdatafill.webp)
+
+4. Click on Create
+
+## Edit your flow
+
+1. Click on the Edit button ![](/images/ribbonedit.webp)
+
+2. Configure your flow logic
+
+3. Publish your Flow
+
+## Use your flow in a Command
+
+1. Copy the details of your published flow ![](/images/ribbonnotification.webp)
+   You will get two values:
+   A. File name
+   B. Function name
+
+2. Open the Command Bar designer and click Edit Command bar for the entity you want to extend&#x20;
+
+3. Choose Main form ![](/images/ribbonmainform.webp)
+
+4. Create a new Command and choose type as **JavaScript** ![](/images/ribboncomponentlibrary.webp)
+
+5. Fill in the details you copied from the published flow ![](/images/ribbonoob.webp)**Library**: Copy it from the `library name` of the published flow
+   **Function**: Copy it from the `function` of the published flow
+   **Parameter**: pass the `Primary Control` as the first parameter
+
+6. Save & Publish
+
+Observe the result after clicking on the button ![](/images/ribbonobserve.webp)
