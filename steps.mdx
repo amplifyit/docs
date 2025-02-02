@@ -3,3 +3,111 @@ title: "Steps"
 description: "This page contains the list of action steps that can be used to when creating custom client-side business logic in UX Flows"
 icon: "rocket-launch"
 ---
+
+## Basic Action Steps
+
+<AccordionGroup>
+  <Accordion title="Hide" defaultOpen={false} icon="eye-slash">
+    Hides the selected controls from the form
+  </Accordion>
+
+  <Accordion title="Display" defaultOpen={false} icon="eye">
+    Displays the selected controls from the form
+  </Accordion>
+
+  <Accordion title="Lock" defaultOpen={false} icon="lock">
+    Locks the selected controls on the form
+  </Accordion>
+
+  <Accordion title="Lock Section Fields" defaultOpen={false} icon="lock">
+    Locks the selected section related controls on the form
+  </Accordion>
+
+  <Accordion title="Lock Tab Fields" defaultOpen={false} icon="lock">
+    Locks the selected tab related controls on the form
+  </Accordion>
+
+  <Accordion title="Unlock" defaultOpen={false} icon="unlock">
+    Unlocks the selected controls on the form
+  </Accordion>
+
+  <Accordion title="Unlock Section Fields" defaultOpen={false} icon="unlock">
+    Unlocks the selected section related controls on the form
+  </Accordion>
+
+  <Accordion title="Unlock Tab Fields" defaultOpen={false} icon="unlock">
+    Unlocks the selected tab related controls on the form
+  </Accordion>
+
+  <Accordion title="Set as Required" defaultOpen={false} icon="circle-exclamation">
+    Marks the selected columns as required on the form by displaying a red asterisk (\*) next to the column’s title.
+  </Accordion>
+
+  <Accordion title="Set as Recommended" defaultOpen={false} icon="lightbulb">
+    Marks the selected columns as recommended on the form by displaying a blue plus sign (⁺) next to the column’s title.
+  </Accordion>
+
+  <Accordion title="Set as Optional" defaultOpen={false} icon="option">
+    Marks the selected columns as optional on the form
+  </Accordion>
+
+  <Accordion title="Set Focus" defaultOpen={false} icon="magnifying-glass">
+    Sets focus on the selected tab by navigating to the tab on the form.
+  </Accordion>
+
+  <Accordion title="Set as Empty" defaultOpen={false} icon="transporter-empty">
+    Clears the value of the selected columns
+  </Accordion>
+
+  <Accordion title="Show Loading Spinner" defaultOpen={false} icon="spinner">
+    Displays a loading spinner, which is a visual indicator used to show that a process is in progress and that the user should wait for it to complete. The spinner will be displayed on the user interface until you use the **Hide Loading Spinner** step.
+
+
+  </Accordion>
+
+  <Accordion title="Hide Loading Spinner" defaultOpen={false} icon="eye-slash">
+    Removes the loading spinner from the user interface once the process is complete. This step is necessary to ensure that the spinner is not displayed indefinitely. Once the Hide Loading Spinner action step is selected, the spinner will be hidden from the user interface.
+  </Accordion>
+
+  <Accordion title="Refresh" defaultOpen={false} icon="arrows-rotate">
+    Updates the form data in the background, without reloading the page. This ensures that any changes made to the form will be immediately reflected.
+  </Accordion>
+
+  <Accordion title="Save" defaultOpen={false} icon="floppy-disk">
+    Saves the record asynchronously, which means that the saving process will occur in the background. This allows you to continue with other tasks without waiting for the save to complete.
+  </Accordion>
+
+  <Accordion title="Cancel Default Behaviour" defaultOpen={false} icon="ban">
+    Stops any default behavior that is expected to happen, for example, you can stop navigating to the next step in the Business Process Flow if the record doesn't qualify to pass to the next step. Another example, is to not open the lookup field when the user clicks on the lookup record tag. This allows you to extend and change the behavior and apply a custom one in a supported way.
+  </Accordion>
+
+  <Accordion title="Set Error on Control" defaultOpen={false} icon="bell">
+    Displays an error message on a specific control.
+
+    <Warning>
+      **Attention**: When setting an error on a new control, remember that the Unique Id you choose must be different for each error notification. If you use an already existing Id, you won’t be able to create your notification.
+    </Warning>
+
+    <Tip>
+      **Tip**: Use a short Unique Id for easier identification.
+    </Tip>
+  </Accordion>
+
+  <Accordion title="Remove Error on Control" defaultOpen={false} icon="bell-slash">
+    Removes an error message that has already been set.
+  </Accordion>
+
+  <Accordion title="Filter Lookup Tables" defaultOpen={false} icon="filter">
+    Filters the contents of a lookup table based on specific criteria. By using this action step, you can create a subset of the original table that only includes rows that meet certain conditions. This can be useful for a variety of purposes, such as identifying specific records within a larger dataset or simplifying the data that is displayed to the user.
+
+
+
+    <Tip>
+      Separate tables by using a comma ","
+    </Tip>
+
+    <Tip>
+      Use the logical name of tables, for example: `"contact,account,new_x"`
+    </Tip>
+  </Accordion>
+</AccordionGroup>
