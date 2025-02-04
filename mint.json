@@ -64,11 +64,20 @@
     {
       "group": "Advanced",
       "pages": [
-        "intellisense",
-        "functions",
-        "variables",
-        "branching",
-        "loops"
+        "advanced/intellisense",
+        "advanced/functions",
+        "advanced/variables",
+        "advanced/branching",
+        "advanced/loops"
+      ]
+    }
+    ,
+    {
+      "group": "Release & Updates",
+      "pages": [
+        "product/knownissues",
+        "product/releases",
+        "product/roadmap",
       ]
     }
     ,
