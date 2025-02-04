@@ -1,0 +1,68 @@
+---
+title: "Branching"
+description: "This page explains how to create branching logic in your flow. "
+icon: "code-branch"
+---
+
+## Condition Step
+
+This action step allows you to create branching logic in your flow, which means that it will take different paths depending on the result of the condition.
+
+![](/images/condition.png)
+
+### How it Works
+
+*"True"* and *"False"* are values that a computer program can use to make decisions. When a condition is evaluated, it can either be true or false. If the condition is true, then the program will execute one set of instructions, and if the condition is false, then the program will execute another set of instructions.
+
+![](/images/conditionpossibilities.png)
+
+In this step, there are three branches to consider:
+
+1. Result when the condition is met (true)&#x20;
+   **EXAMPLE**: When the condition is met, the record will be saved.
+
+2. Result when the condition is not met (false)&#x20;
+   **EXAMPLE**: When the condition is not met, a notification will be displayed.
+
+3. The flow will continue regardless of the result.
+
+### Configure Conditions
+
+To configure this action, follow these steps:
+
+1. Click **Configure Condition.**
+   **Result:** The "Configure your condition here" window will open.![](/images/conditionconfig.png)
+
+2. Choose either “AND” or “OR”.
+   **EXAMPLE:**
+   If we have two conditions A and B, then the condition "A **AND** B" will only be true if both A and B are true. On the other hand, the condition "A **OR** B" will be true if either A or B is true (or both).
+
+3. You can use the **Group** and **Filter** buttons to:
+
+   * Add subgroups and multiple filters.
+
+   * Choose among default operators if you don't select a dynamic value.
+
+   * Use more operators by selecting a dynamic value.
+
+4. After completing your configuration, click **Done**.
+
+**Result:** The condition's configuration is complete. You can eventually add action steps to the true and false branches.
+
+## Confirm User
+
+This action step allows you to create a confirmation logic for the user that will branch your flow with two possible values: either confirmed by the user or not confirmed by the user, in order to create a set of action steps based on the user interaction.
+
+![](/images/confirmuser.png)
+
+In this step, there are three branches to consider:
+
+![](/images/confirmuserpossibilities.png)
+
+1. Result when the user confirms the popup message&#x20;
+   **EXAMPLE**: When the user confirms, A record view will be opened.
+
+2. Result when the user rejects the confirmation popup message.
+   **EXAMPLE**: When the user rejects the confirmation, a notification will be displayed.
+
+3. The flow will continue regardless of the result.
