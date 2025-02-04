@@ -2,10 +2,10 @@
   "$schema": "https://mintlify.com/schema.json",
   "name": "PowerUX Docs",
   "logo": {
-    "dark": "/logo/dark1.svg",
-    "light": "/logo/lightnew.svg"
+    "dark": "/logo/dark1.png",
+    "light": "/logo/lightnew.png"
   },
-  "favicon": "logo/light.svg",
+  "favicon": "/logo/light.svg",
   "colors": {
     "primary": "#0D9373",
     "light": "#07C983",
