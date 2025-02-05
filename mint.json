@@ -36,12 +36,12 @@
     {
       "name": "Community",
       "icon": "slack",
-      "url": "https://mintlify.com/community"
+      "url": "/community"
     },
     {
       "name": "Blog",
       "icon": "newspaper",
-      "url": "https://mintlify.com/blog"
+      "url": "https://blog.powerux.app"
     }
   ],
   "navigation": [
@@ -58,6 +58,7 @@
       "pages": [
         "triggers",
         "commandbar",
+        "settings",
         "steps"
       ]
     },
