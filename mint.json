@@ -35,8 +35,8 @@
     },
     {
       "name": "Community",
-      "icon": "slack",
-      "url": "/community"
+      "icon": "people-group",
+      "url": "https://docs.powerux.app/community"
     },
     {
       "name": "Blog",
