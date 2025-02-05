@@ -23,15 +23,15 @@
   ],
   "tabs": [
     {
-      "name": "API Reference",
-      "url": "api-reference"
+      "name": "Controls",
+      "url": "controls"
     }
   ],
   "anchors": [
     {
       "name": "Documentation",
       "icon": "book-open-cover",
-      "url": "https://mintlify.com/docs"
+      "url": "ttps://docs.powerux.app"
     },
     {
       "name": "Community",
@@ -83,19 +83,11 @@
     }
     ,
     {
-      "group": "API Documentation",
+      "group": "Get Started",
       "pages": [
-        "api-reference/introduction"
+        "controls/introduction"
       ]
     },
-    {
-      "group": "Endpoint Examples",
-      "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/delete"
-      ]
-    }
   ],
   "footerSocials": {
     "github": "https://github.com/amplifyit",
