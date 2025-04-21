@@ -59,7 +59,8 @@
         "triggers",
         "commandbar",
         "settings",
-        "steps"
+        "steps",
+        "projects"
       ]
     },
     {
