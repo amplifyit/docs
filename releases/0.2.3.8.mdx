@@ -1,0 +1,84 @@
+---
+title: "Release 0.2.3.8"
+description: "PowerUX Release Notes — Version 0.2.3.8"
+---
+
+## 🚀 New Features
+
+### Templates for UX Flows
+
+Create UX Flows faster with our new pre-built template system. This initial release includes templates for:
+
+- Forms
+- Command bars UX flows
+
+More templates will be added in future releases to expand your workflow creation options.
+
+### MatchRegex Boolean Function
+
+A new boolean function has been added to enhance text validation capabilities:
+
+- **MatchRegex**: Returns true/false based on whether text matches a specified regular expression pattern
+- Enables makers to implement sophisticated text format validation in their flows
+
+## ⚡ Enhancements
+
+### Improved Error Handling for Web Resource Deletion
+
+Enhanced error messaging when web resource deletion fails due to:
+
+- Existing dependencies
+- Ongoing publish requests
+
+Error messages are now more descriptive and actionable, helping you quickly identify and resolve deletion issues.
+
+## 🐛 Bug Fixes
+
+### Custom Handlers Management
+
+- **Fixed**: Removing custom handlers now properly removes custom triggers
+- **Previously**: Makers had to manually remove triggers from forms and delete web resources
+- **Now**: Complete cleanup is handled automatically
+
+### UX Flow Validation Improvements
+
+- **Fixed**: Unique name validation now scopes to the same table instead of all flows
+- **Benefit**: Allows reuse of flow names across different tables while maintaining uniqueness where needed
+
+### Publishing and Disabling Flow Operations
+
+- **Fixed**: Publishing or disabling flows during active customization processes
+- **Previously**: Operations would fail and continue running in background
+- **Now**: Operations are blocked until current publish request completes, requiring manual re-initiation
+
+### For Loop Intellisense Enhancement
+
+- **Fixed**: Item intellisense now properly appears within For Loop step actions
+- **Benefit**: Improved development experience with better code completion
+
+### Roles Intellisense Fix
+
+- **Fixed**: Roles now return as an array instead of a collection
+- **Previously**: Roles collection couldn't be looped over, causing failures
+- **Now**: Makers can properly configure loops over role arrays
+
+### Project Solution Mapping
+
+- **Fixed**: UX flow to project relationships now work with default solutions
+- **Previously**: Flows failed when related to projects without solution mapping
+- **Now**: Supports all project configurations including default solutions
+
+### Lookup Tag Custom Trigger Scripts
+
+- **Fixed**: Script execution for lookup tag custom triggers
+- **Applies to**: Both minified and unminified scripts
+- **Previously**: Scripts failed when triggers occurred
+- **Now**: Reliable execution in all scenarios
+
+---
+
+## 📋 Summary
+
+This release focuses on improving the maker experience with new template functionality, enhanced error handling, and significant bug fixes across UX flow management, intellisense, and project features.
+
+For questions or support, please contact our support team or visit our documentation.
