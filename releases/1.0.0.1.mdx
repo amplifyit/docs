@@ -1,0 +1,184 @@
+---
+title: "Release 1.0.0.1"
+description: "PowerUX Release Notes — Version 1.0.0.1"
+---
+
+# PowerUX v1.0.0.1 Release Notes
+
+**Release Date**: October 25, 2025\
+**Release Type**: Production Release (Stable)\
+**Status**: ✨ First Official Production Release
+
+---
+
+## 🎉 Welcome to PowerUX 1.0!
+
+We're thrilled to announce the **first production release** of PowerUX! This milestone marks the transition from beta to a stable, enterprise-ready platform for building sophisticated Microsoft Dynamics 365 business logic without code.
+
+PowerUX v1.0.0.1 brings together months of development, testing, and feedback into a polished, production-grade low-code custom business logic development tool for citizen developers and functional consultants.
+
+---
+
+## 🚀 Major Features
+
+### 1. Reusable Functions
+
+Create modular, reusable UX flows that can be called across multiple forms and command bars, dramatically improving maintainability and reducing duplication.
+
+**Key Capabilities:**
+
+- **Function Library**: Build a centralized repository of reusable business logic
+- **Cross-Flow Integration**: Use custom functions in any Form or Command Bar flow
+- **Template Support**: Start with pre-built templates or create from scratch
+- **AI-Assisted Creation**: Generate functions using natural language prompts
+- **Parameter Passing**: Define inputs and outputs for flexible function calls
+- **Version Control**: Track and manage function versions independently
+
+**How to Create a Function:**
+
+1. Click **New Flow** → **Function**
+2. Choose creation method:
+   - Start with a **Template**
+   - Use **AI** to generate from natural language
+   - Start with a **Blank** canvas
+3. Configure function parameters and logic
+4. Click **Publish**
+
+**How to Use a Function:**
+
+1. Open any Form or Command Bar flow
+2. Click **Edit** to enter the UI Editor
+3. Add a new step
+4. Navigate to the **Functions** tab
+5. Select your custom function
+6. Configure inputs and click **Publish**
+
+### 2. AI-Powered Flow Generation
+
+Transform natural language descriptions into fully functional UX flows with AI-assisted drafting.
+
+**Key Capabilities:**
+
+- **Natural Language Input**: Describe what you want in plain English
+- **Intelligent Flow Construction**: AI generates complete flow logic automatically
+- **Smart Field Mapping**: Automatic detection and mapping of entity fields
+- **Context-Aware Actions**: AI understands business context and selects appropriate actions
+- **Draft Mode**: Review and modify AI-generated flows before publishing
+- **Learning System**: AI improves suggestions based on your metadata and patterns
+
+**How to Generate Flows with AI:**
+
+1. Click **New Flow** → Select flow type (Form, Command Bar, or Function)
+2. Choose **Create with AI**
+3. Enter your requirements in natural language:
+   - _"When the opportunity amount exceeds \$100,000, send a notification to the sales manager and mark it as high priority"_
+   - _"If the case priority is high and no owner is assigned, assign it to the support team queue"_
+   - _"Calculate the total project cost by summing all related task estimates"_
+4. Review the generated flow in the UI Editor
+5. Make any adjustments or refinements
+6. Click **Publish** when ready
+
+**AI Prompt Examples:**
+
+- _"Create a flow that validates phone numbers and shows an error if the format is incorrect"_
+- _"When a lead is qualified, create an opportunity and copy over key fields like estimated value and close date"_
+- _"Set the account status to active if all required fields are filled and approved"_
+
+---
+
+## ✨ Enhanced Features
+
+### Backend Code Generation Improvements
+
+Building on v0.3.0.0, this release includes refined backend optimizations:
+
+- **Selective Script Updates**: Update individual flows without regenerating entire scripts
+- **Safe Flow Removal**: Cleanly disable flows while preserving other published logic
+- **Performance Optimization**: Faster publishing cycles with improved code generation
+- **Script Stability**: Reduced risk of unintended side effects during updates
+
+### Platform Stability
+
+- **Production-Ready**: Extensive testing and bug fixes for enterprise deployments
+- **Performance**: Optimized runtime execution for complex flows
+
+---
+
+## 🔧 Technical Improvements
+
+### Intellisense Engine
+
+- **Static Reference Expansion**: Comprehensive support for all Dataverse context objects
+- **Dynamic Field Generation**: Automatic metadata-based field suggestions
+- **Method Completion**: Accurate completion for getValue(), getName(), and other SDK methods
+- **Type Safety**: Improved type checking for field references and operations
+
+### Runtime Engine
+
+- **Optimized Execution**: Faster flow execution with improved JavaScript generation
+- **Error Recovery**: Graceful degradation when actions fail
+
+---
+
+## 📚 Documentation & Resources
+
+### New Documentation
+
+- **Reusable Functions Guide**: Complete guide to creating and using functions
+- **AI Flow Generation Tutorial**: Step-by-step walkthrough of AI-assisted flow creation
+
+---
+
+## 🔄 Breaking Changes
+
+**None** - This release maintains backward compatibility with all beta versions.
+
+All existing flows will continue to work without modifications. However, we recommend reviewing your flows to take advantage of new features like reusable functions.
+
+---
+
+## 📋 Known Limitations
+
+- Custom Functions might have issue when flows are published, content might be in one line or might be commented out as well.
+- Dragging and dropping trees of actions makes the steps in the UI editor overlap each other.
+
+---
+
+## 🎯 Migration Notes
+
+### From Beta Versions
+
+1. **No action required** - All existing flows are compatible
+2. **Optional**: Review flows to identify candidates for conversion to reusable functions
+3. **Recommended**: Try AI generation for new flows to experience productivity gains
+4. **Consider**: Refactoring complex flows using the new function architecture
+
+### New Installations
+
+- PowerUX v1.0.0.1 includes all features from previous versions
+- Follow standard installation procedures in the documentation
+
+---
+
+## 🙏 Acknowledgments
+
+Thank you to our amazing early adopters, and beta testers who helped shape PowerUX into a production-ready platform. Your feedback, bug reports, and feature suggestions have been invaluable.
+
+Special thanks to the Microsoft Dynamics 365 community for embracing low-code automation and pushing the boundaries of what's possible with model-driven apps.
+
+---
+
+## 🎊 Conclusion
+
+PowerUX v1.0.0.1 represents a major milestone in democratizing Model-driven apps & Microsoft Dynamics 365 customization. With reusable functions and AI-powered flow generation, business users can now build sophisticated automation without writing code, while developers gain powerful tools to accelerate their work.
+
+We're excited to see what you'll build with PowerUX!
+
+---
+
+**Download PowerUX v1.0.0.1**: [Get it from AppSource](https://appsource.microsoft.com/en-us/product/dynamics-365/amplifyit1681473641329.powerux)
+
+**Version**: 1.0.0.1\
+**Release Type**: Production (Stable)\
+**Released**: October 25, 2025\
+**Build**: 1.0.0.1-stable

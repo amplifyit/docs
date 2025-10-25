@@ -41,7 +41,7 @@
     {
       "name": "Blog",
       "icon": "newspaper",
-      "url": "https://blog.powerux.app"
+      "url": "https://powerux.app/blog"
     }
   ],
   "navigation": [
@@ -54,10 +54,17 @@
       ]
     },
     {
+      "group": "AI-Powered",
+      "pages": [
+        "ai/ai-flows"
+      ]
+    },
+    {
       "group": "Essentials",
       "pages": [
         "triggers",
         "commandbar",
+        "essentials/functions",
         "settings",
         "steps",
         "projects"

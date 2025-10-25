@@ -1,0 +1,247 @@
+---
+title: "Reusable Functions"
+description: "Create reusable UX flows that can be used across multiple forms and command bars"
+icon: "function"
+---
+
+## Overview
+
+Reusable Functions in PowerUX allow you to create modular, reusable UX flows that can be leveraged across multiple forms and command bars in your model-driven applications. This powerful feature promotes code reusability, maintains consistency, and simplifies maintenance of your business logic.
+
+<Info>
+  **Key Benefits**
+
+  - Create once, use anywhere across your flows
+  - Maintain consistency across your application
+  - Simplify updates by editing in one place
+  - Reduce development time
+</Info>
+
+## Creating a Reusable Function
+
+Follow these steps to create a reusable function in PowerUX:
+
+### Step 1: Navigate to UX Flows
+
+From your PowerUX interface, navigate to the UX Flows section where you can see all your existing flows.
+
+### Step 2: Click on New Flow
+
+Click the **New Flow** button in the toolbar to start creating a new flow.
+
+![New Flow Button](/images/function-new-flow-click.webp)
+
+### Step 3: Select Function Type
+
+In the New Flow window, you'll see three flow types:
+
+- **Form** - Extend model-driven form
+- **Command Bar** - Extend model-driven command bar (ribbon)
+- **Function** - Create a function to use across your flows
+
+Click on **Function** to create a reusable function.
+
+![Select Function Type](/images/functions-new-flow-option.webp)
+
+### Step 4: Choose Creation Method
+
+PowerUX offers three ways to create your function:
+
+<CardGroup cols={3}>
+  <Card title="Create with AI" icon="sparkles">
+    Use natural language to describe your function and let AI generate it for you
+  </Card>
+  <Card title="Use a Template" icon="clone">
+    Start with pre-built templates for common scenarios
+  </Card>
+  <Card title="Blank Function" icon="file">
+    Start from scratch with a blank function
+  </Card>
+</CardGroup>
+
+Select your preferred method based on your needs.
+
+![Functions New Flow Template Web](/images/functions-new-flow-template.webp)
+
+### Step 5: Set Creation Parameters
+
+Configure your function parameters:
+
+<ParamField path="Flow Name" type="string" required>
+  A descriptive name for your function (e.g., "Hide or Display Account Fields")
+</ParamField>
+
+<ParamField path="Description" type="string">
+  A brief description of what the function does (e.g., "Conditionally display or hide account details fields based on input parameters")
+</ParamField>
+
+<ParamField path="Table" type="dropdown" required>
+  Select the table this function will operate on (e.g., Account, Contact)
+</ParamField>
+
+<ParamField path="Form" type="dropdown" required>
+  Select the form associated with this function
+</ParamField>
+
+<Warning>
+  Table and Form options are made to generate IntelliSense only in the UX Flow Builder. These selections help PowerUX provide contextual suggestions as you build your function.
+</Warning>
+
+![Function Parameters](/images/functions-new-flow-params.webp)
+
+### Step 6: Create the Function
+
+Click the **Create** button to generate your function. PowerUX will create the function and open it in the UX Flow Builder.
+
+![Functions New Flow Result Web](/images/functions-new-flow-result.webp)
+
+### Step 7: Configure The Function's Parameters
+
+In the UX Flow Builder, parameters in functions are optional, but they help you configure reusable functions with different behavior based on the passed parameters. You're able to add multiple input parameters and a single output parameter. Follow the steps below in order to configure parameters in your function:
+
+1. Open the function UX Flow UI Editor
+2. Click on Configure Parameters from the top left side
+
+   ![Functions Parameters Pn](/images/functions-parameters.png)
+3. To add an input parameter, click on + Input Parameter
+
+   ![Functions Parameters List Pn](/images/functions-parameters-list.png)
+4. Choose the name of the parameter and type
+5. To add an output parameter, click on + Output Parameter
+
+<Note>
+  Note: You can have only one output parameter
+</Note>
+
+<Tip>
+  If you want to return multiple output parameters, you can set the output parameter as an object and set the parameter as a JSON body.
+</Tip>
+
+### Step 8: Build Your Function Logic
+
+In the UX Flow Builder, add the action steps that define your function's behavior:
+
+1. Click the **\+** button to add action steps
+2. Configure each action step with the appropriate logic
+3. Use variables, conditional logic, and data operations as needed
+4. Save your flow
+
+![Function Builder](/functions-using-edit-window.png)
+
+### Step 9: Publish Your Function
+
+Once you're satisfied with your function:
+
+1. Click the **Save** button to save your changes
+2. Click the **Publish** button to make the function available for use in other flows
+
+<Check>
+  Your reusable function is now published and ready to be used across your forms and command bars!
+</Check>
+
+## Using a Reusable Function
+
+After creating and publishing your reusable function, you can use it in any Form or Command Bar UX Flow.
+
+### Step 1: Open Your Target Flow
+
+Navigate to the Form or Command Bar flow where you want to use your function and click **Edit**.
+
+![Edit Flow](/functions-using-edit.png)
+
+### Step 2: Access the UI Editor
+
+In the UX Flow editor, you'll see the visual flow builder where you can add action steps.
+
+### Step 3: Add a New Step
+
+Click the **\+** button or click between existing steps to add a new action step.
+
+![Add Step](/functions-using-add-step.png)
+
+### Step 4: Find Your Function
+
+In the action step selector:
+
+1. Navigate to the **functions** tab
+2. Search for your custom function by name
+3. You'll see all your published functions listed here
+
+![Functions Tab](/images/functions-list.webp)
+
+<Tip>
+  Custom functions are organized in the **functions** category for easy discovery. You can search by name or browse the list.
+</Tip>
+
+### Step 5: Configure and Publish
+
+1. Click on your function to add it to the flow
+2. Configure any input parameters required by the function
+3. Click **Save** to save your changes
+4. Click **Publish** to deploy your updated flow
+
+### Step 6: Observe the Result
+
+Test your flow to ensure the function executes correctly:
+
+1. Open the form or command bar where you added the function
+2. Trigger the flow (e.g., on form load, on button click)
+3. Verify that the function performs as expected
+
+<Check>
+  Your reusable function is now integrated into your flow!
+</Check>
+
+## Best Practices
+
+<AccordionGroup>
+  <Accordion title="Naming Conventions">
+    Use clear, descriptive names for your functions that indicate their purpose. For example:
+
+    - `validateAccountDetails`
+    - `hideOrDisplayFields`
+    - `calculateTotalAmount`
+  </Accordion>
+  <Accordion title="Documentation">
+    Always add a meaningful description to your functions. This helps other makers understand the function's purpose without opening it.
+  </Accordion>
+  <Accordion title="Input Parameters">
+    Design your functions to accept input parameters for maximum flexibility. This allows you to reuse the same function with different configurations.
+  </Accordion>
+  <Accordion title="Version Control">
+    When updating a published function, be mindful that changes will not affect all flows using that function. you need to republish the flows that uses the functions to take effect.
+  </Accordion>
+</AccordionGroup>
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Function not appearing in the functions tab">
+    Make sure you've published the function. Only published functions are available for use in other flows.
+
+    Functions are usable only in non-function UX flows. You can't use nested functions for now.
+  </Accordion>
+  <Accordion title="Function not executing">
+    Check that the function is properly configured in your flow and that all required parameters are provided.
+  </Accordion>
+  <Accordion title="Changes not reflecting">
+    After modifying a function, remember to publish both the function and any flows using it to see the changes.
+  </Accordion>
+</AccordionGroup>
+
+## Related Resources
+
+<CardGroup cols={2}>
+  <Card title="Action Steps" icon="list-check" href="/steps">
+    Learn about all available action steps you can use in your functions
+  </Card>
+  <Card title="Triggers" icon="bolt" href="/triggers">
+    Understand how to trigger your flows and functions
+  </Card>
+  <Card title="Variables" icon="code" href="/variables">
+    Work with variables in your functions
+  </Card>
+  <Card title="AI-Generated Flows" icon="sparkles" href="ai/ai-flows">
+    Create functions using natural language with AI
+  </Card>
+</CardGroup>

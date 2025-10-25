@@ -1,0 +1,499 @@
+---
+title: "AI-Generated Flows"
+description: "Create UX flows using natural language with generative AI"
+icon: "sparkles"
+---
+
+## Overview
+
+PowerUX's AI-Generated Flows feature allows you to create sophisticated UX flows using natural language descriptions. Simply describe what you want your flow to do in plain English, and our generative AI will create the complete flow with all the necessary action steps, logic, and configurations.
+
+<Info>
+  **Powered by Generative AI** This feature uses advanced AI to understand your requirements and generate production-ready flows. No coding or technical knowledge required!
+</Info>
+
+## Why Use AI-Generated Flows?
+
+<CardGroup cols={2}>
+  <Card title="Speed" icon="bolt">
+    Create complex flows in seconds instead of minutes or hours
+  </Card>
+  <Card title="Simplicity" icon="wand-magic-sparkles">
+    Describe what you want in plain language - no technical expertise needed
+  </Card>
+  <Card title="Accuracy" icon="bullseye">
+    AI understands context and generates flows with proper logic and structure
+  </Card>
+  <Card title="Learning Tool" icon="graduation-cap">
+    See how AI implements your requirements and learn PowerUX best practices
+  </Card>
+</CardGroup>
+
+## Getting Started with AI Flows
+
+### Step 1: Start Creating a Flow
+
+From the UX Flows list, click **\+ New Flow** to open the flow creation dialog.
+
+### Step 2: Select Flow Type
+
+Choose the type of flow you want to create:
+
+- **Form** - For model-driven app forms
+- **Command Bar** - For ribbon buttons
+- **Function** - For reusable functions
+
+![Genai Create New Window Pn](/images/genai-create-new-window.png)
+
+### Step 3: Choose "Create with AI"
+
+In the flow properties screen, you'll see several options. Click on **Create with AI** - the first option with the sparkles icon.
+
+<Frame>
+  ![Genai Create New Pn](/images/genai-create-new.png)
+</Frame>
+
+<Tip>
+  The **Generative AI** button on the right indicates you're in AI creation mode!
+</Tip>
+
+### Step 4: Describe Your Flow
+
+A text area will appear asking you to "Describe Your Flow in Plain Text". This is where the magic happens!
+
+<Frame>
+  ![Genai Create New Desc Pn](/images/genai-create-new-desc.png)
+</Frame>
+
+**Write a clear description** of what you want your flow to do. For example:
+
+```
+When the form loads, show a notification if the record name contains Test
+```
+
+<Note>
+  Be specific about:
+
+  - **When** it should happen (trigger)
+  - **What** it should do (actions)
+  - **Conditions** if any (logic)
+</Note>
+
+### Step 5: Configure Flow Properties
+
+After describing your flow, set the standard flow properties:
+
+<ParamField path="Flow Name" type="string" required>
+  A descriptive name for your flow
+</ParamField>
+
+<ParamField path="Description" type="string">
+  Brief description of what the flow does (optional but recommended)
+</ParamField>
+
+<ParamField path="Table" type="dropdown" required>
+  Select the table this flow operates on
+</ParamField>
+
+<ParamField path="Form" type="dropdown" required>
+  Select the form for this flow (for Form flows)
+</ParamField>
+
+### Step 6: Create Your Flow
+
+Click the **Create** button. PowerUX AI will:
+
+1. Analyze your natural language description
+2. Determine the required action steps
+3. Configure the proper logic and conditions
+4. Generate a complete, ready-to-use flow
+
+<Check>
+  Your AI-generated flow opens in the flow builder, ready to review, modify, or publish!
+</Check>
+
+## Writing Effective AI Prompts
+
+The quality of your AI-generated flow depends on how clearly you describe your requirements. Follow these best practices:
+
+### Be Specific About Triggers
+
+<AccordionGroup>
+  <Accordion title="Good Trigger Descriptions" icon="check">
+    - "When the form loads"
+    - "When the user clicks the Save button"
+    - "When the Status field changes"
+    - "On form load, after data is loaded"
+  </Accordion>
+  <Accordion title="Avoid Vague Triggers" icon="xmark">
+    - "Sometimes do this"
+    - "When needed"
+    - "Usually when..."
+  </Accordion>
+</AccordionGroup>
+
+### Describe Clear Actions
+
+<AccordionGroup>
+  <Accordion title="Good Action Descriptions" icon="check">
+    - "Show a notification with the message 'Record saved successfully'"
+    - "Hide the Credit Limit field"
+    - "Set the Status field to 'Active'"
+  </Accordion>
+  <Accordion title="Avoid Ambiguous Actions" icon="xmark">
+    - "Do something with the field"
+    - "Update stuff"
+    - "Handle the record"
+  </Accordion>
+</AccordionGroup>
+
+### Include Conditions Clearly
+
+<AccordionGroup>
+  <Accordion title="Good Condition Descriptions" icon="check">
+    - "If the Account Type equals 'Enterprise'"
+    - "When the record name contains 'Test'"
+    - "If the Annual Revenue is greater than 1000000"
+    - "When the Status is not 'Active' and Priority is 'High'"
+  </Accordion>
+  <Accordion title="Avoid Unclear Conditions" icon="xmark">
+    - "If it's the right type"
+    - "When appropriate"
+    - "If needed"
+  </Accordion>
+</AccordionGroup>
+
+## Example AI Prompts
+
+### Simple Notification
+
+**Prompt:**
+
+```
+When the form loads, show a notification if the record name contains Test
+```
+
+**What AI Creates:**
+
+- Form OnLoad trigger
+- Condition checking if Name contains "Test"
+- Form notification action with an appropriate message
+
+---
+
+### Field Visibility Control
+
+**Prompt:**
+
+```
+When the Account Type field changes, hide the Credit Limit field if the 
+type is not Enterprise, otherwise show it
+```
+
+**What AI Creates:**
+
+- Field OnChange trigger for Account Type
+- Branching condition based on field value
+- Show/Hide control actions for Credit Limit field
+
+---
+
+### Data Validation
+
+**Prompt:**
+
+```
+When the user clicks Save, check if the email field has a valid email format. 
+If not, show an error on the field and prevent saving
+```
+
+**What AI Creates:**
+
+- Form OnSave trigger
+- Email validation logic
+- Error display on field
+- Cancel save action if invalid
+
+---
+
+### Automated Record Creation
+
+**Prompt:**
+
+```
+When the form saves and the Status is changed to Won, automatically create 
+a new Task record assigned to the owner with subject "Follow up on opportunity"
+```
+
+**What AI Creates:**
+
+- Form OnSave trigger
+- Condition checking Status change
+- Create Record action with proper field mappings
+- Success notification
+
+---
+
+### Complex Business Logic
+
+**Prompt:**
+
+```
+On form load, if the user is a System Administrator, show all fields. 
+If the user is a Sales Rep, hide the Cost Price and Margin fields. 
+For all other users, make the form read-only and show a warning notification
+```
+
+**What AI Creates:**
+
+- Form OnLoad trigger
+- Multiple branching conditions based on user roles
+- Field visibility controls for each scenario
+- Form mode changes
+- Conditional notifications
+
+## Advanced AI Prompt Techniques
+
+### Use Context from Multiple Fields
+
+**Prompt:**
+
+```
+When Annual Revenue is greater than $5M and Account Type is Enterprise 
+and Credit Hold is false, automatically set the Credit Limit to the 
+Annual Revenue multiplied by 0.2
+```
+
+The AI understands multi-field relationships and creates appropriate logic.
+
+### Specify Complex Workflows
+
+**Prompt:**
+
+```
+When the form saves:
+1. If Status changed to Complete, set the send email flag to yes
+2. Show a success notification
+```
+
+The AI creates a sequential flow with all steps in the correct order.
+
+## Reviewing and Refining AI-Generated Flows
+
+After AI generates your flow:
+
+<Steps>
+  <Step title="Review the Flow">
+    Examine the generated action steps in the flow builder
+  </Step>
+  <Step title="Test the Logic">
+    Use the Preview feature to test different scenarios
+  </Step>
+  <Step title="Refine if Needed">
+    Modify any action steps to better match your specific requirements
+  </Step>
+  <Step title="Add Details">
+    Enhance with additional error handling or user feedback
+  </Step>
+  <Step title="Publish">
+    When satisfied, publish your flow to production
+  </Step>
+</Steps>
+
+<Tip>
+  AI-generated flows are a great starting point. You can always modify them to add more sophisticated logic or handle edge cases.
+</Tip>
+
+## Tips for Best Results
+
+<AccordionGroup>
+  <Accordion title="Start Simple, Then Iterate" icon="seedling">
+    Begin with a basic description and let AI create the flow. Then, if needed, create a new version with more details.
+  </Accordion>
+  <Accordion title="Use Field Names Correctly" icon="tag">
+    Reference fields by their display names as they appear in the form (e.g., "Account Name" not "accountname").
+  </Accordion>
+  <Accordion title="Be Sequential" icon="list-ol">
+    If you have multiple actions, describe them in the order they should occur. Use numbered lists when helpful.
+  </Accordion>
+  <Accordion title="Specify User Experience" icon="user">
+    Describe the user experience you want: "show a notification", "display an error", "prompt for confirmation".
+  </Accordion>
+</AccordionGroup>
+
+## Common Use Cases
+
+### Conditional Field Visibility
+
+```
+When the form loads, hide the Discount field if the Account Type 
+is not Premium or VIP
+```
+
+### Dynamic Field Requirements
+
+```
+When the Opportunity Stage changes to Proposal, make the 
+Budget Amount and Close Date fields required
+```
+
+### Calculated Fields
+
+```
+When Quantity or Unit Price changes, calculate and set the 
+Total Amount to Quantity multiplied by Unit Price
+```
+
+### User Notifications
+
+```
+When the form loads, if this is a high-priority case that hasn't 
+been updated in 48 hours, show an urgent warning notification
+```
+
+### Record Status Management
+
+```
+When Save is clicked, if all required fields are filled and the 
+Status is Draft, automatically change Status to Ready for Review
+```
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Flow doesn't do what I expected">
+    **Solution**: Review the generated flow in the builder. The AI might have interpreted your description differently. Modify the action steps or try rephrasing your description.
+  </Accordion>
+  <Accordion title="Some fields are not found">
+    **Solution**: Ensure you're using the exact display names of fields as they appear in your form. Check spelling and capitalization.
+  </Accordion>
+  <Accordion title="Logic is too simple or too complex">
+    **Solution**: Adjust the detail level in your description. More detail = more complex flows. Less detail = simpler flows.
+  </Accordion>
+  <Accordion title="Need to combine multiple scenarios">
+    **Solution**: Either describe all scenarios in one prompt, or create separate flows for each scenario and combine them manually.
+  </Accordion>
+</AccordionGroup>
+
+## Comparing AI vs Manual Creation
+
+<CardGroup cols={2}>
+  <Card title="Create with AI" icon="sparkles">
+    **Best For:**
+
+    - Quick prototyping
+    - Common scenarios
+    - Learning PowerUX
+    - Time-sensitive projects
+
+    **Time:** Seconds to minutes
+  </Card>
+  <Card title="Manual Creation" icon="hand">
+    **Best For:**
+
+    - Very specific requirements
+    - Complex custom logic
+    - Edge case handling
+    - Fine-tuned optimization
+
+    **Time:** Minutes to hours
+  </Card>
+</CardGroup>
+
+<Tip>
+  **Pro Tip**: Use AI to create the initial flow structure, then manually refine it for your exact needs. This gives you the best of both worlds!
+</Tip>
+
+## AI Generation Limits
+
+<Note>
+  **Current Limitations**
+
+  While our AI is powerful, be aware of these current limitations:
+
+  - Complex multi-branch logic may need manual refinement
+  - Very specific custom requirements might need manual implementation
+  - Integration with external systems may require additional configuration
+  - Some advanced scenarios are better built manually
+
+  These limitations are continually improving as our AI capabilities expand!
+</Note>
+
+## Privacy and Data
+
+<Info>
+  **Your Data is Safe**
+
+  When you use AI-generated flows:
+
+  - Your natural language descriptions are processed securely
+  - No sensitive data from your environment is stored
+  - AI learns from patterns, not your specific data
+  - All standard PowerUX privacy policies apply
+</Info>
+
+## Best Practices Summary
+
+<Check>
+  **Do This:**
+</Check>
+
+- ✅ Write clear, specific descriptions
+- ✅ Use proper field names
+- ✅ Mention triggers explicitly
+- ✅ Describe desired user experience
+- ✅ Review and refine as needed
+
+<Warning>
+  **Avoid This:**
+</Warning>
+
+- ❌ Vague or ambiguous descriptions
+- ❌ Assuming AI knows your custom fields
+- ❌ Overly complex single prompts
+- ❌ Expecting perfection without review
+- ❌ Using technical jargon unnecessarily
+
+## Related Resources
+
+<CardGroup cols={2}>
+  <Card title="Reusable Functions" icon="function" href="/essentials/reusable-functions">
+    Create reusable logic that can be used across flows
+  </Card>
+  <Card title="Action Steps" icon="list-check" href="/steps">
+    Learn about all available action steps
+  </Card>
+  <Card title="Triggers" icon="bolt" href="/triggers">
+    Understand when flows execute
+  </Card>
+</CardGroup>
+
+## FAQs
+
+<AccordionGroup>
+  <Accordion title="How accurate is the AI?" icon="chart-line">
+    The AI is highly accurate for common scenarios and well-described requirements. For best results, provide clear, specific descriptions. You can always review and modify the generated flow.
+  </Accordion>
+  <Accordion title="Can I edit AI-generated flows?" icon="pen">
+    Absolutely! AI-generated flows are fully editable. Use AI to create the structure, then refine manually to perfect your flow.
+  </Accordion>
+  <Accordion title="What if the AI doesn't understand my description?" icon="question">
+    Try rephrasing your description with more detail or simpler language. Break complex requirements into smaller, clearer statements.
+  </Accordion>
+  <Accordion title="Is there a cost for using AI generation?" icon="dollar-sign">
+    AI generation is included with your PowerUX subscription. Check your plan details for any usage limits.
+  </Accordion>
+  <Accordion title="Can AI create Functions too?" icon="function">
+    Yes! The AI generation feature works with Forms, Command Bars, and Functions. Just select Function as the flow type.
+  </Accordion>
+</AccordionGroup>
+
+## Get Started Now
+
+Ready to create your first AI-generated flow?
+
+<Card title="Try AI Flow Generation" icon="rocket" href="#getting-started-with-ai-flows">
+  Click New Flow → Choose Create with AI → Describe what you want → Create!
+</Card>
+
+Experience the power of natural language flow creation and see how AI can accelerate your PowerUX development!
